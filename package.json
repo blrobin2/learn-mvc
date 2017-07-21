@@ -15,8 +15,5 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "webpack"
-  },
-  "jest": {
-    "testEnvironment": "jest-environment-node"
   }
 }
