@@ -1,13 +1,13 @@
 import PenguinModel from './PenguinModel'
 
 test('it should get back a list of penguins', () => {
-  function RequestMock(url) {
+  function RequestMock() {
     const listOfPenguins = {
       json() {
         return [{"name":"Emperor","imageUrl":"http://imageUrl","size":"36.7kg (m), 28.4kg (f)","favoriteFood":"fish and squid"}];
       }
     }
-    return new Promise((resolve, reject) => resolve(listOfPenguins))
+    return new Promise((resolve) => resolve(listOfPenguins))
   }
 
   const penguinModel = new PenguinModel(RequestMock)
